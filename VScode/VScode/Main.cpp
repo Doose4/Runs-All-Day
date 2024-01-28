@@ -1,31 +1,31 @@
-//#include <iostream>
-////#include <string>
-//#include <chrono>
-//#include <thread>
-////#include <ctime>
-//#include "Timer.hpp"
-//
-//using namespace std;
-//using namespace std::this_thread;
-//using namespace std::chrono;
-//
-//int main(){
-//    Timer newt;
-//
-//    newt.start();
-//
-//    //Wait time
-//    sleep_for(seconds(2));
-//    //sleep_until(system_clock::now() + seconds(3));
-//    
-//    //functional time?
-//    //std::cout << "printing out 1000 stars...\n";
-//    //for (int i = 0; i < 1000; ++i) std::cout << "*";
-//    //std::cout << std::endl;
-//
-//    newt.end();
-//
-//    cout << "it took " << newt.elapsed() << " seconds.";
-//
-//    return 0;
-//}
+#include <iostream>
+//#include <string>
+#include <chrono>
+#include <thread>
+//#include <ctime>
+#include "Timer.hpp"
+
+using namespace std;
+using namespace std::this_thread;
+using namespace std::chrono;
+
+int main(){
+    Timer newt;
+
+    newt.start();
+
+    //Wait time
+    sleep_for(seconds(2));
+    //sleep_until(system_clock::now() + seconds(3));
+    
+    //functional time?
+    //std::cout << "printing out 1000 stars...\n";
+    //for (int i = 0; i < 1000; ++i) std::cout << "*";
+    //std::cout << std::endl;
+
+    newt.end();
+
+    cout << "it took " << newt.elapsed() << " seconds.";
+
+    return 0;
+}
