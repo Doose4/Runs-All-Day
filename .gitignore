@@ -32,3 +32,4 @@ VScode/VScode/x64/Debug/VScode.tlog/link.write.1.tlog
 VScode/VScode/x64/Debug/VScode.tlog/VScode.lastbuildstate
 VScode/x64/Debug/VScode.exe
 VScode/VScode/VScode.vcxproj.user
+*.vsidx
