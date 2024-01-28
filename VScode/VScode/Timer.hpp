@@ -13,4 +13,5 @@ public:
 	int start();
 	int end();
 	int elapsed();
+	int runner(int t);
 };

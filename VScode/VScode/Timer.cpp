@@ -1,10 +1,12 @@
 #include <iostream>
 #include <chrono>
+#include <thread>
 #include "timer.hpp"
 
 
 using namespace std;
 using namespace std::chrono;
+
 
 //Dog::Dog(string name)
 //{
@@ -33,4 +35,18 @@ int Timer::elapsed()
 	//std::cout << std::endl;
 
 	return time_span.count();
+};
+
+int Timer::runner(int t) {
+
+    Timer newt;
+
+    newt.start();
+
+    //wait time
+    this_thread::sleep_for(seconds(t));
+
+    newt.end();
+
+    return newt.elapsed();
 };

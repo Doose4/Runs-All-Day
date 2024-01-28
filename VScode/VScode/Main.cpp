@@ -14,10 +14,11 @@ int main(){
 
     newt.start();
 
-    //... what you want to measure ...
+    //Wait time
     sleep_for(seconds(2));
     //sleep_until(system_clock::now() + seconds(3));
     
+    //functional time?
     //std::cout << "printing out 1000 stars...\n";
     //for (int i = 0; i < 1000; ++i) std::cout << "*";
     //std::cout << std::endl;
