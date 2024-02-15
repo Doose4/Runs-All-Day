@@ -1,27 +1,34 @@
 #include <iostream>
-//#include <string>
+#include <string>
 #include <chrono>
 #include <thread>
-//#include <ctime>
+#include <ctime>
+#include <cassert>
 #include "Timer.hpp"
 
 using namespace std;
 using namespace std::this_thread;
 using namespace std::chrono;
 
-int main(){
+void tester() {
+    Timer m;
+
+    cout << "Starting tests..." << endl;
+    assert(m.runner(0) == 0);
+    assert(m.runner(1) == 1);
+    assert(m.runner(2) == 2);
+    assert(m.runner(3) != 2);
+    cout << "Your tests succeeded!" << endl;
+}
+
+int main() {
+
+    tester();
+
     Timer newt;
 
     newt.start();
-
-    //Wait time
     sleep_for(seconds(2));
-    //sleep_until(system_clock::now() + seconds(3));
-    
-    //functional time?
-    //std::cout << "printing out 1000 stars...\n";
-    //for (int i = 0; i < 1000; ++i) std::cout << "*";
-    //std::cout << std::endl;
 
     newt.end();
 

@@ -1,17 +1,11 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
-#include "timer.hpp"
+#include "Timer.hpp"
 
 
 using namespace std;
 using namespace std::chrono;
-
-
-//Dog::Dog(string name)
-//{
-//	this->name = name;
-//}
 
 int Timer::start()
 {
@@ -31,9 +25,6 @@ int Timer::elapsed()
 {
 	duration<double> time_span = duration_cast<duration<double>>(last - first);
 
-	//std::cout << "It took me " << time_span.count() << " seconds.";
-	//std::cout << std::endl;
-
 	return time_span.count();
 };
 
@@ -43,7 +34,6 @@ int Timer::runner(int t) {
 
     newt.start();
 
-    //wait time
     this_thread::sleep_for(seconds(t));
 
     newt.end();
