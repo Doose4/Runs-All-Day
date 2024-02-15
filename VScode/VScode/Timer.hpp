@@ -11,4 +11,5 @@ public:
 	int end();
 	int elapsed();
 	int runner(int t);
+	string pretty_print(int tm, int ky=0);
 };

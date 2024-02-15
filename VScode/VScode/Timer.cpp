@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <string>
 #include "Timer.hpp"
 
 
@@ -39,4 +40,31 @@ int Timer::runner(int t) {
     newt.end();
 
     return newt.elapsed();
+};
+
+string Timer::pretty_print(int tm, int ky){
+	if (ky == 0) {
+		if (tm == 0) {
+			return "No time has passed.";
+		}
+	}
+
+	if (tm < 60) {
+		if (tm == 1) {
+			return to_string(tm) + " second has passed.";
+		}
+		return to_string(tm) + " seconds has passed.";
+	}
+	else if (tm < 3600) {
+		if (tm < 1200) {
+			return "1 minute " + pretty_print(int(tm % 60),1);
+		}
+		return to_string(tm/60)+ " minutes " + pretty_print(int(tm % 60), 1);
+	}
+	else {
+		if (tm < 7200) {
+			return "1 hour " + pretty_print(int(tm % 3600), 1);
+		}
+		return to_string(tm / 3600) + " hours " + pretty_print(int(tm % 3600), 1);
+	}
 };
