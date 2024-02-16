@@ -8,6 +8,7 @@
 using namespace std;
 using namespace std::chrono;
 
+//starts the timer
 int Timer::start()
 {
 	first = steady_clock::now();
@@ -15,6 +16,7 @@ int Timer::start()
 	return 0;
 };
 
+//ends the timer
 int Timer::end()
 {
 	last = steady_clock::now();
@@ -22,6 +24,7 @@ int Timer::end()
 	return 0;
 };
 
+//checks the time that has elapsed
 int Timer::elapsed()
 {
 	duration<double> time_span = duration_cast<duration<double>>(last - first);
@@ -29,6 +32,7 @@ int Timer::elapsed()
 	return time_span.count();
 };
 
+//runs the timer
 int Timer::runner(int t) {
 
     Timer newt;
@@ -42,6 +46,7 @@ int Timer::runner(int t) {
     return newt.elapsed();
 };
 
+//print out the time
 string Timer::pretty_print(int tm, int ky){
 	if (ky == 0) {
 		if (tm == 0) {

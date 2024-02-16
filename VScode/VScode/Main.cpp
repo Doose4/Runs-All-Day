@@ -10,6 +10,7 @@ using namespace std;
 using namespace std::this_thread;
 using namespace std::chrono;
 
+//tester program
 void tester() {
     Timer m;
 
@@ -35,6 +36,7 @@ void tester() {
     cout << "Your tests succeeded!" << endl;
 }
 
+//main program
 int main() {
 
     tester();
